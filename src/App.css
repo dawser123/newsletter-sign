@@ -5,12 +5,43 @@
 }
 :root {
 	--primary-color: rgb(255, 98, 87);
-	--Dark-Slate-Grey: hsl(234, 29%, 20%);
-	--Charcoal-Grey: hsl(235, 18%, 26%);
-	--Grey: hsl(231, 7%, 60%);
-	--White: hsl(0, 0%, 100%);
+	--Dark-Slate-Grey: rgb(36, 39, 66);
+	--Charcoal-Grey: rgb(54, 56, 78);
+	--Grey: rgb(146, 148, 160);
+	--White: rgb(255, 255, 255);
+	--primary-color-gradient: linear-gradient(to right, rgb(255, 98, 87), rgb(245, 126, 79));
 }
 
 html {
 	font-family: 'Roboto', sans-serif;
+}
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--Charcoal-Grey);
+}
+button {
+	padding: 1.2em;
+	margin: 2.5em 0 ;
+	width: 100%;
+	border-radius: 6px;
+	color: var(--White);
+	background-color: var(--Dark-Slate-Grey);
+	border: 1px solid transparent;
+	transition: background-color, box-shadow 0.3s;
+	cursor: pointer;
+}
+
+button:hover {
+	box-shadow: -1px 4px 12px 1px rgba(255, 98, 87, 0.77);
+	background: var(--primary-color-gradient);
+}
+@media (max-width: 768px) {
+	body{
+		height: 100vh;
+		display: block;
+		background-color: var(--White);
+	}
 }
