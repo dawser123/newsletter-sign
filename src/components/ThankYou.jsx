@@ -11,7 +11,7 @@ const ThankYou = ({setIsActive}) => {
 
 			<h1>Thanks for subscribing!</h1>
 			<p>
-				A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to
+				A confirmation email has been sent to <span>ash@loremcompany.com.</span> Please open it and click the button inside to
 				confirm your subscription
 			</p>
 			<button onClick={clickHandler} className={classes.dismiss}>Dissmis message</button>
