@@ -25,15 +25,10 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/dawser123/newsletter-sign)
-- Live Site URL: [Add live site URL here](https://dawser123.github.io/newsletter-sign/)
+- Solution URL: [solution URL here](https://github.com/dawser123/newsletter-sign)
+- Live Site URL: [live site URL here](https://dawser123.github.io/newsletter-sign/)
 
 
 ### Built with
