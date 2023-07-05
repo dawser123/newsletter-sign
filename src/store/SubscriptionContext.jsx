@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-const CartContext = React.createContext({
+const SubscriptionContext = React.createContext({
 	isActive: true,
 	onActive: () => {},
 	onDeactive: () => {},
 })
-
-export const CartContextProvider = props => {
+export const SubscriptionContextProvider = props => {
 	const [isActive, setIsActive] = useState(true)
 	const activeHandler = () => {
 		setIsActive(false)
@@ -14,9 +13,9 @@ export const CartContextProvider = props => {
 		setIsActive(true)
 	}
 	return (
-		<CartContext.Provider value={{ isActive, onActive: activeHandler, onDeactive: deactiveHandler }}>
+		<SubscriptionContext.Provider value={{ isActive, onActive: activeHandler, onDeactive: deactiveHandler }}>
 			{props.children}
-		</CartContext.Provider>
+		</SubscriptionContext.Provider>
 	)
 }
-export default CartContext
+export default SubscriptionContext

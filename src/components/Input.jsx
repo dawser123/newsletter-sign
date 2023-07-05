@@ -1,20 +1,16 @@
 import React, { useContext, useState } from 'react'
 import classes from './Input.module.css'
-import CartContext from '../store/cartContext'
+import SubscriptionContext from '../store/SubscriptionContext'
 const Input = () => {
-	const ctx = useContext(CartContext)
+	const ctx = useContext(SubscriptionContext)
 	const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-
 	const [enteredEmail, setEnteredEmail] = useState('')
 	const [emailIsValid, setEmailIsValid] = useState(true)
 	const emailChangeHandler = event => {
 		setEnteredEmail(event.target.value)
 	}
-
-	console.log(ctx.onActive);
 	const submitHandler = event => {
 		event.preventDefault()
-
 		if (enteredEmail.trim().length === 0 || !validateEmail.test(enteredEmail)) {
 			setEmailIsValid(false)
 			return
@@ -47,5 +43,4 @@ const Input = () => {
 		</>
 	)
 }
-
 export default Input

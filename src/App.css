@@ -11,7 +11,6 @@
 	--White: rgb(255, 255, 255);
 	--primary-color-gradient: linear-gradient(to right, rgb(255, 98, 87), rgb(245, 126, 79));
 }
-
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -33,7 +32,6 @@ button {
 	transition: background-color, box-shadow 0.3s;
 	cursor: pointer;
 }
-
 button:hover {
 	box-shadow: -1px 4px 12px 1px rgba(255, 98, 87, 0.77);
 	background: var(--primary-color-gradient);

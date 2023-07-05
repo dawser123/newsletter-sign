@@ -3,8 +3,6 @@ import classes from './Welcome.module.css'
 import illustration from '../assets/illustration-mobile.svg'
 import iconList from '../assets/icon-list.svg'
 import Input from './Input'
-
-
 const Welcome = () => {
 	return (
 		<>
@@ -24,13 +22,10 @@ const Welcome = () => {
 							<img src={iconList} /> <p>And much more!</p>
 						</div>
 						<Input/>
-						
 					</div>
-					
 				</div>
 			</div>
 		</>
 	)
 }
-
 export default Welcome
