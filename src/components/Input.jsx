@@ -34,7 +34,7 @@ const Input = () => {
 						value={enteredEmail}
 						id="email"
 						type="text"
-						// autoComplete="off"
+						autoComplete="off"
 						placeholder="email@company.com"
 					/>
 					<button>Subscribe to monthly newsletter</button>
