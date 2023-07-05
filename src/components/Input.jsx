@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import classes from './Input.module.css'
-const Input = ({onClick}) => {
+import CartContext from '../store/cartContext'
+const Input = () => {
+	const ctx = useContext(CartContext)
 	const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 	const [enteredEmail, setEnteredEmail] = useState('')
@@ -9,6 +11,7 @@ const Input = ({onClick}) => {
 		setEnteredEmail(event.target.value)
 	}
 
+	console.log(ctx.onActive);
 	const submitHandler = event => {
 		event.preventDefault()
 
@@ -18,7 +21,7 @@ const Input = ({onClick}) => {
 		} else {
 			setEnteredEmail('')
 			setEmailIsValid(true)
-			onClick()
+			ctx.onActive()
 		}
 	}
 	return (
@@ -35,10 +38,10 @@ const Input = ({onClick}) => {
 						value={enteredEmail}
 						id="email"
 						type="text"
-						autoComplete="off"
+						// autoComplete="off"
 						placeholder="email@company.com"
 					/>
-					<button >Subscribe to monthly newsletter</button>
+					<button>Subscribe to monthly newsletter</button>
 				</div>
 			</form>
 		</>

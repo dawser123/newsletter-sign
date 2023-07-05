@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { useContext} from 'react'
 import ThankYou from './components/ThankYou'
 import Welcome from './components/Welcome'
+import CartContext from './store/cartContext'
+import './App.css'
 
 function App() {
-	const [isActive, setIsActive] = useState(true)
-	const clickHandler = () => {
-		setIsActive(false)
-	}
-	return <>{isActive ? <Welcome onClick={clickHandler} /> : <ThankYou setIsActive={setIsActive} />}</>
+const ctx = useContext(CartContext)
+	return (
+		<>
+			{ctx.isActive ? <Welcome /> : <ThankYou />}
+		</>
+	)
 }
 
 export default App

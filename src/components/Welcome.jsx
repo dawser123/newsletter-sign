@@ -5,7 +5,7 @@ import iconList from '../assets/icon-list.svg'
 import Input from './Input'
 
 
-const Welcome = ({onClick}) => {
+const Welcome = () => {
 	return (
 		<>
 			<div className={classes.container}>
@@ -23,7 +23,7 @@ const Welcome = ({onClick}) => {
 						<div className={classes.info}>
 							<img src={iconList} /> <p>And much more!</p>
 						</div>
-						<Input onClick={onClick} />
+						<Input/>
 						
 					</div>
 					
